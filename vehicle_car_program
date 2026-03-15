@@ -1,0 +1,41 @@
+public class Main{
+    public static void main(String[] args){
+        Car c1=new Car("tesla",250);
+        Car  c2=new Car("BMW",250);
+        Car  c3=new Car("AUDI",240);
+        c1.start();
+        c1.showDetails();
+        c1.stop();
+        
+        c2.start();
+        c2.showDetails();
+        c2.stop();
+        
+        c3.start();
+        c3.showDetails();
+        c3.stop();
+    }
+}
+
+
+class Vehicle{
+    void start(){
+        System.out.println("vechile started");
+    }
+    void stop(){
+        System.out.println("vechile stopp");
+    }
+}
+class Car extends Vehicle{
+    String brand;
+    int speed;
+    Car(String b,int s) {
+        brand=b;
+        speed=s;
+        
+    }
+    void showDetails(){
+        System.out.println("brand:"  +  brand);
+        System.out.println("speed:"  +  speed);
+    }
+}
